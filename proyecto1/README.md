@@ -43,6 +43,47 @@ Se solicitó que no exista tránsito de datos entre departamentos, los cuales es
 | IT_               | 192.168.44.2   |
 | S_IT              | 192.168.44.3   |
 
+* **Topología del Proyecto**
+<img src="img/P_topo.jpeg">
+
+* **Ping entre host**
+- RRHH y RRHH1.
+<img src="img/pi2.jpeg">
+
+- SECRETARIA y SECRETARIA1.
+<img src="img/pi1.jpeg">
+
+## :smile:Comandos Utilizados
+enable
+configure terminal
+
+* **VTP**
+vtp mode client
+vtp domain P6
+vtp password usac
+exit
+wr
+sh vtp status
+
+* **VLAN**
+vlan xx
+name xx
+
+* **MODE TRUNK**
+interface range f0/
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan all
+show startup-config
+
+* **MODE ACCESS**
+switchport mode access
+switchport access vlan 
+
+* **MODE TRANSPARENT**
+switchport mode transparent
+switchport access vlan 
+
 
 
 ## :smile:Tecnologías Utilizadas
@@ -56,12 +97,12 @@ Se solicitó que no exista tránsito de datos entre departamentos, los cuales es
 |Switch 2960                |              Q95.00 |       8      |             Q760.00 | [referencia](https://www.imeqmo.com/shop/ms105g-switch-mercusys-ms105g-5-puertos-10-100-1000mbps-rj45-19205?category=42#attr=944)|
 | Cable UTP 5e              |               Q7.00 |      100     |             Q700.00 | [referencia](https://www.steren.com.gt/cable-utp-cat5e-azul.html)|
 | Cable UTP crossover       |              Q19.00 |       50     |             Q950.00 | [referencia](https://www.steren.com.gt/cable-ethernet-utp-cat-5-cruzado-crossover-de-2-1-m.html)|
-| Computadora de Escritorio |            Q4607.00 |       11     |           Q50677.00 | [referencia](https://www.macrosistemas.com/producto/dell-optipliex-7010mff-i3-13100t8gbssd-256gb-wpro-11-espanol-3yrs/)| 
-| Laptop                    |            Q4330.00 |       2      |            Q8660.00 | [referencia](https://www.macrosistemas.com/producto/hp-laptop-dy2076nr-intel-core-i5-1135g7-8gb-ram-256gb-ssd-2p0a3ua-15-6/)|
+| Computadora de Escritorio |            Q4,607.00 |       11     |           Q50,677.00 | [referencia](https://www.macrosistemas.com/producto/dell-optipliex-7010mff-i3-13100t8gbssd-256gb-wpro-11-espanol-3yrs/)| 
+| Laptop                    |            Q4,330.00 |       2      |            Q8,660.00 | [referencia](https://www.macrosistemas.com/producto/hp-laptop-dy2076nr-intel-core-i5-1135g7-8gb-ram-256gb-ssd-2p0a3ua-15-6/)|
 <!-- |---------------------------|---------------------|--------------|---------------------|------------------| -->
-Total: Q67662.00
+Total: Q67,662.00
 
-## ✒️ Autor
+## ✒️ Autores
 
 * **Alvaro Esaú Arenas** - *Desarrollador* - [Contacto](https://github.com/esau-arenas).
 * **Jorge Antonio Pérez** - *Desarrollador* - [Contacto](https://github.com/pereznator).
